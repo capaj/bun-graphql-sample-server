@@ -13,9 +13,12 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@graphql-tools/schema": "^10.0.0",
+    "@types/md5": "^2.3.2",
     "graphql": "^16.7.1",
-    "graphql-jit": "^0.8.4"
+    "graphql-jit": "^0.8.4",
+    "md5": "^2.3.0"
   },
   "resolutions": {
     "graphql": "^16.7.1",
