@@ -55,7 +55,7 @@ const server = Bun.serve({
         query: string
         variables?: Record<string, any>
       }
-      console.log('request:', body)
+      // console.log('request:', body)
 
       let compiledQuery = queryCache.get(body.query)
 
@@ -64,6 +64,7 @@ const server = Bun.serve({
 
         compiledQuery = compileQuery(schema, document)
         // check if the compilation is successful
+        queryCache.set(body.query, compiledQuery)
 
         if (!isCompiledQuery(compiledQuery)) {
           console.error(compiledQuery)
